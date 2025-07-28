@@ -1,6 +1,6 @@
 {
     "name": "SerialMuxProt",
-    "version": "2.2.2",
+    "version": "2.3.0",
     "description": "Communication Protocol based on Streams. Uses Multiplexing to differentiate data channels.",
     "keywords": "SerialMuxProt",
     "repository": {
