@@ -305,6 +305,16 @@ public:
         return registered;
     }
 
+    /**
+     * Set user data to be passed to the callbacks.
+     *
+     * @param[in] userData User data to be passed to the callbacks.
+     */
+    void setUserData(void* userData)
+    {
+        m_userData = userData;
+    }
+
 private:
     /**
      * Control Channel Command: SYNC
