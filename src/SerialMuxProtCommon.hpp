@@ -56,14 +56,22 @@
 /** Length of Complete Header Field */
 #define HEADER_LEN (CHANNEL_LEN + DLC_LEN + CHECKSUM_LEN)
 
+#ifndef MAX_DATA_LEN
+
 /** Data Field Length in Bytes */
 #define MAX_DATA_LEN (32U)
+
+#endif /* MAX_DATA_LEN */
 
 /** Total Frame Length in Bytes */
 #define MAX_FRAME_LEN (HEADER_LEN + MAX_DATA_LEN)
 
+#ifndef CHANNEL_NAME_MAX_LEN
+
 /** Max length of channel name */
 #define CHANNEL_NAME_MAX_LEN (10U)
+
+#endif /* CHANNEL_NAME_MAX_LEN */
 
 /** Number of Control Channel. */
 #define CONTROL_CHANNEL_NUMBER (0U)
@@ -71,10 +79,10 @@
 /** DLC of Control Channel Payload. */
 #define CONTROL_CHANNEL_PAYLOAD_LENGTH (sizeof(ControlChannelPayload))
 
-/** Period of Heartbeat when Synced. */
+/** Period of Heartbeat when Synced in ms */
 #define HEATBEAT_PERIOD_SYNCED (5000U)
 
-/** Period of Heartbeat when Unsynced */
+/** Period of Heartbeat when Unsynced in ms */
 #define HEATBEAT_PERIOD_UNSYNCED (1000U)
 
 /** Max number of attempts at receiving a Frame before resetting RX Buffer */
